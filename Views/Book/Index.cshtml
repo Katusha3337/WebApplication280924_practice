@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Book>
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Список книг</title>
+    </head>
+    <body>
+        <h1>Список книг</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Название</th>
+                    <th>Автор</th>
+                    <th>Жанр</th>
+                    <th>Год</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var book in Model)
+                {
+                    <tr>
+                        <td>@book.Id</td>
+                        <td>@book.Title</td>
+                        <td>@book.Author</td>
+                        <td>@book.Genre</td>
+                        <td>@book.Year</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Book/Add">Добавить новую книгу</a>
+    </body>
+</html>

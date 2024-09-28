@@ -1,0 +1,30 @@
+﻿@model WebApplication280924_practice.ViewModels.BookViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавить книгу</title>
+</head>
+<body>
+    <h1>Добавить книгу</h1>
+    <form asp-action="Add" method="post">
+        <div>
+            <label>Название</label>
+            <input type="text" asp-for="Title" />
+        </div>
+        <div>
+            <label>Автор</label>
+            <input type="text" asp-for="Author" />
+        </div>
+        <div>
+            <label>Жанр</label>
+            <input type="text" asp-for="Genre" />
+        </div>
+        <div>
+            <label>Год</label>
+            <input type="number" asp-for="Year" />
+        </div>
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
